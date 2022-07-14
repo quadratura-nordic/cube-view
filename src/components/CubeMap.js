@@ -43,6 +43,9 @@ export default class CubeMap {
 
 
     init(canvas, images) {
+        if(!canvas){
+            return;
+        }
         let gl = canvas.getContext("webgl");
         if (!gl) {
             gl = canvas.getContext("experimental-webgl");
