@@ -5220,6 +5220,10 @@ function () {
   _createClass(CubeMap, [{
     key: "init",
     value: function init(canvas, images) {
+      if (!canvas) {
+        return;
+      }
+
       var gl = canvas.getContext("webgl");
 
       if (!gl) {
