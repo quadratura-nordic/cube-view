@@ -663,17 +663,4 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 script.render = render;
 script.__file = "src/components/CubeView.vue";
 
-var components = { CubeView: script };
-
-const plugin = {
-  install (Vue) {
-    for (const prop in components) {
-      if (components.hasOwnProperty(prop)) {
-        const component = components[prop];
-        Vue.component(component.name, component);
-      }
-    }
-  }
-};
-
-export { plugin as default };
+export { script as default };

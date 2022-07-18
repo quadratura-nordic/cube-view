@@ -12,19 +12,19 @@
   },
   "dependencies": {
     "hammerjs": "^2.0.8",
-    "vue": "^2.5.17"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.1.1",
-    "@vue/cli-plugin-eslint": "^3.1.5",
-    "@vue/cli-service": "^3.1.4",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.2.37",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
     "rollup": "^2.77.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-vue": "^6.0.0",
-    "vue-template-compiler": "^2.5.17"
+    "rollup-plugin-vue": "^6.0.0"
   },
   "eslintConfig": {
     "root": true,

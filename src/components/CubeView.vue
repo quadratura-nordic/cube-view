@@ -1,6 +1,6 @@
 <template>
     <div class="load stage" ref="stage">
-        <canvas class="canvas" width="1260px" height="654px" style="width:100%;margin:0;display:block"
+        <canvas class="canvas" width="1260" height="654" style="width:100%;margin:0;display:block"
                 ref="canvas"></canvas>
         <div v-if="!imagesLoaded">
             <div class="loader"></div>
