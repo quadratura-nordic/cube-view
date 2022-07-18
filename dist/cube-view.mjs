@@ -640,8 +640,8 @@ const _hoisted_1 = {
 };
 const _hoisted_2 = {
   class: "canvas",
-  width: "1260px",
-  height: "654px",
+  width: "1260",
+  height: "654",
   style: {"width":"100%","margin":"0","display":"block"},
   ref: "canvas"
 };
