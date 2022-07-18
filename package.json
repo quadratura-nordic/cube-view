@@ -1,11 +1,12 @@
 {
   "name": "cube-view",
   "version": "0.1.0",
-  "main": "./dist/cube-view.common.js",
+  "main": "dist/cube-view.js",
+  "module": "dist/cube-view.mjs",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "rollup -c",
     "lint": "vue-cli-service lint",
     "build-bundle": "vue-cli-service build --target lib --name cube-view ./src/components/index.js"
   },
@@ -20,6 +21,9 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "rollup": "^2.77.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-vue": "^6.0.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
