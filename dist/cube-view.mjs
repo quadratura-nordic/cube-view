@@ -1,5 +1,5 @@
 import Hammer from 'hammerjs';
-import { openBlock, createElementBlock, createElementVNode, createCommentVNode } from 'vue';
+import { openBlock, createElementBlock, createElementVNode, normalizeClass, createCommentVNode } from 'vue';
 
 function normalize(v) {
     let length = Math.sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2]);
@@ -530,7 +530,8 @@ var script = {
                         Y: null
                     }
                 },
-                orientation: null
+                orientation: null,
+                hasPanned: false,
             }
         },
         mounted() {
@@ -553,6 +554,7 @@ var script = {
                 mc.on('panstart', () => {
                     this.rotate.start.Y = this.rotate.Y;
                     this.rotate.start.X = this.rotate.X;
+                    this.hasPanned = true;
                 });
                 mc.on('pan', (e) => {
                     var multi = 100 / e.target.clientWidth;
@@ -647,15 +649,17 @@ const _hoisted_2 = {
 };
 const _hoisted_3 = { key: 0 };
 const _hoisted_4 = /*#__PURE__*/createElementVNode("div", { class: "loader" }, null, -1 /* HOISTED */);
-const _hoisted_5 = [
-  _hoisted_4
-];
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("div", _hoisted_1, [
     createElementVNode("canvas", _hoisted_2, null, 512 /* NEED_PATCH */),
     (!$data.imagesLoaded)
-      ? (openBlock(), createElementBlock("div", _hoisted_3, _hoisted_5))
+      ? (openBlock(), createElementBlock("div", _hoisted_3, [
+          createElementVNode("div", {
+            class: normalizeClass(["indicator", { hidden: $data.hasPanned }])
+          }, null, 2 /* CLASS */),
+          _hoisted_4
+        ]))
       : createCommentVNode("v-if", true)
   ], 512 /* NEED_PATCH */))
 }
