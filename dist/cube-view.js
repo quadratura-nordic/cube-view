@@ -655,18 +655,19 @@ const _hoisted_2 = {
 };
 const _hoisted_3 = { key: 0 };
 const _hoisted_4 = /*#__PURE__*/vue.createElementVNode("div", { class: "loader" }, null, -1 /* HOISTED */);
+const _hoisted_5 = [
+  _hoisted_4
+];
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1, [
     vue.createElementVNode("canvas", _hoisted_2, null, 512 /* NEED_PATCH */),
     (!$data.imagesLoaded)
-      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3, [
-          vue.createElementVNode("div", {
-            class: vue.normalizeClass(["indicator", { hidden: $data.hasPanned }])
-          }, null, 2 /* CLASS */),
-          _hoisted_4
-        ]))
-      : vue.createCommentVNode("v-if", true)
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3, _hoisted_5))
+      : vue.createCommentVNode("v-if", true),
+    vue.createElementVNode("div", {
+      class: vue.normalizeClass(["indicator", { hidden: $data.hasPanned }])
+    }, null, 2 /* CLASS */)
   ], 512 /* NEED_PATCH */))
 }
 

@@ -1,5 +1,5 @@
 import Hammer from 'hammerjs';
-import { openBlock, createElementBlock, createElementVNode, normalizeClass, createCommentVNode } from 'vue';
+import { openBlock, createElementBlock, createElementVNode, createCommentVNode, normalizeClass } from 'vue';
 
 function normalize(v) {
     let length = Math.sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2]);
@@ -649,18 +649,19 @@ const _hoisted_2 = {
 };
 const _hoisted_3 = { key: 0 };
 const _hoisted_4 = /*#__PURE__*/createElementVNode("div", { class: "loader" }, null, -1 /* HOISTED */);
+const _hoisted_5 = [
+  _hoisted_4
+];
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("div", _hoisted_1, [
     createElementVNode("canvas", _hoisted_2, null, 512 /* NEED_PATCH */),
     (!$data.imagesLoaded)
-      ? (openBlock(), createElementBlock("div", _hoisted_3, [
-          createElementVNode("div", {
-            class: normalizeClass(["indicator", { hidden: $data.hasPanned }])
-          }, null, 2 /* CLASS */),
-          _hoisted_4
-        ]))
-      : createCommentVNode("v-if", true)
+      ? (openBlock(), createElementBlock("div", _hoisted_3, _hoisted_5))
+      : createCommentVNode("v-if", true),
+    createElementVNode("div", {
+      class: normalizeClass(["indicator", { hidden: $data.hasPanned }])
+    }, null, 2 /* CLASS */)
   ], 512 /* NEED_PATCH */))
 }
 

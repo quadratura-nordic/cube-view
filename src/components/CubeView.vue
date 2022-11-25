@@ -3,10 +3,10 @@
         <canvas class="canvas" width="1260" height="654" style="width:100%;margin:0;display:block"
                 ref="canvas">
             </canvas>
-        <div v-if="!imagesLoaded">
-            <div class="indicator" :class="{ hidden: hasPanned }"></div>
+        <div v-if="!imagesLoaded">           
             <div class="loader"></div>
         </div>
+        <div class="indicator" :class="{ hidden: hasPanned }"></div>
        
     </div>
 </template>
