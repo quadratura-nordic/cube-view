@@ -1,10 +1,13 @@
 <template>
     <div class="load stage" ref="stage">
         <canvas class="canvas" width="1260" height="654" style="width:100%;margin:0;display:block"
-                ref="canvas"></canvas>
+                ref="canvas">
+            </canvas>
         <div v-if="!imagesLoaded">
+            <div class="indicator" :class="{ hidden: hasPanned }"></div>
             <div class="loader"></div>
         </div>
+       
     </div>
 </template>
 
@@ -35,7 +38,8 @@
                         Y: null
                     }
                 },
-                orientation: null
+                orientation: null,
+                hasPanned: false,
             }
         },
         mounted() {
@@ -58,6 +62,7 @@
                 mc.on('panstart', () => {
                     this.rotate.start.Y = this.rotate.Y;
                     this.rotate.start.X = this.rotate.X;
+                    this.hasPanned = true;
                 });
                 mc.on('pan', (e) => {
                     var multi = 100 / e.target.clientWidth;
@@ -139,3 +144,7 @@
         }
     }
 </script>
+
+<style scoped>
+
+</style>
